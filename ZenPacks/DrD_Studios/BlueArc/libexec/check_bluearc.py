@@ -101,7 +101,7 @@ if options.l == "filesystem":
   fsLabel = ''
   output  = '|'
   for volume in volumes.get('volumeTable').values():
-    if volume['volumeSysDriveIndex'] == options.fsindex:
+    if int(volume['volumeSysDriveIndex']) == int(float(options.fsindex)):
 
       fsLabel = volume['volumeLabel']
 
